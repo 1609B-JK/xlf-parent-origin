@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >  
+<mapper namespace="com.jk.mapper.user.UserMapper">
+
+
+
+    <select id="login" parameterType="userRequest" resultType="userResponse">
+       select
+			userID as userID,
+			userAccount as userAccount,
+			userPwd as userPwd,
+			userName as userName,
+			userAge as userAge,
+			userSex as userSex
+	   from t_users
+	   where userAccount = #{userAccount}
+    </select>
+    <insert id="insertUser" parameterType="userRequest" >
+        INSERT INTO t_users
+        (userID, userAccount,
+        <if test="null != userName">
+            userName,
+        </if>
+        userAge,
+        userSex,
+        userPwd)
+        VALUES
+        (#{userID}, #{userAccount},
+        <if test="null != userName">
+            #{userName},
+        </if>
+        #{userAge},
+        #{userSex},
+        #{userPwd})
+    </insert>
+
+
+
+</mapper>   
