@@ -1,5 +1,6 @@
 package com.jk.ws.book;
 
+import javax.jws.WebMethod;
 import javax.jws.WebService;
 
 /**
@@ -7,8 +8,14 @@ import javax.jws.WebService;
  */
 @WebService
 public interface WSBookService {
+
+    @WebMethod(operationName = "TheFirstMethod")
     public void test1();
+
+    @WebMethod
     public int test2();
+
+    @WebMethod
     public String test3(String name);
 
 }

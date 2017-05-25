@@ -1,7 +1,6 @@
 package com.jk.controller.banner;
 
 import com.jk.pojo.ResultData;
-import com.jk.pojo.banner.Banner;
 import com.jk.pojo.banner.BannerRequest;
 import com.jk.pojo.banner.BannerResponse;
 import com.jk.service.banner.BannerService;
@@ -17,6 +16,7 @@ import java.util.List;
  * Created by Lynn-F_X on 2017/5/25.
  */
 @Controller
+@RequestMapping("/banner/")
 public class BannerController {
 
     @Autowired

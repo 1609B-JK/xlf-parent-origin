@@ -2,6 +2,7 @@ package com.jk.ws.book.impl;
 
 import com.jk.ws.book.WSBookService;
 
+import javax.jws.WebMethod;
 import javax.jws.WebService;
 
 /**
@@ -15,6 +16,7 @@ public class WSBookServiceImpl implements WSBookService {
     }
 
     @Override
+    //@WebMethod(exclude = true)
     public int test2() {
         System.out.println("返回数字");
         return 9999;

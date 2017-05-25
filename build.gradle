@@ -90,6 +90,10 @@ subprojects {
         //log4j
         compile "log4j:log4j:1.2.17"
 
+
+        //cxf框架
+        compile group: 'org.apache.cxf', name: 'cxf-rt-frontend-jaxws', version: '2.7.18'
+        compile group: 'org.apache.cxf', name: 'cxf-rt-transports-http', version: '2.7.18'
     }
 
 }
